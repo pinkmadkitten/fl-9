@@ -96,15 +96,15 @@
         line-height: 30px;
     }
 
-    a {
+    .pad a {
         color: black;
     }
 
-    a:visited {
+    .pad a:visited {
         color: silver;
     }
 
-    a:hover {
+    .pad a:hover {
         text-decoration: underline;
         border-bottom: 1px solid;
         color: #2aabd2;
