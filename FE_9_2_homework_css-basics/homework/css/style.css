@@ -48,13 +48,14 @@
     }
 
 }
+
 @media screen {
     img.thumbnail {
         border-radius: 50%;
     }
 
     .tm-box-bg-title:hover {
-        background-color: #25c9ff;
+        background-color: #76cdd7;
         color: white;
         font-weight: bold;
     }
@@ -74,26 +75,11 @@
         box-shadow: 0 0 10px 0 #2b2d2f;
     }
 
-    .tm-banner, .tm-content-box, section {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .tm-banner::before, .tm-content-box::before, section::before {
+    #home::before, section::before {
         content: '';
-        position: absolute;
-        top: -23px;
-        left: -5px;
-        border-color: transparent;
-        border-style: solid;
-        transform: rotate(30deg);
-        border-width: 37px;
-        border-left-color: #25c9ff;
-        border-top-color: #25c9ff;
-    }
-
-    .blocks div:nth-child(3)::before {
-        border-width: 0;
+        display: inline-block;
+        border-top: 30px solid #76cdd7;
+        border-right: 130px solid transparent;
     }
 
     .carousel-inner h2 {
