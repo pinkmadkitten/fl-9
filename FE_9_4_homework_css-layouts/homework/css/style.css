@@ -1,0 +1,138 @@
+body {
+    width: 100%;
+    margin: 0;
+    font-family:"Open Sans", serif;
+}
+* {
+    box-sizing: border-box;
+}
+header {
+    display: inline-block;
+    position: relative;
+}
+header img + .content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+header img {
+    width: 100%;
+}
+.content {
+    color: #ffffff;
+    font-weight: normal;
+
+
+}
+.content a {
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+}
+.header-top {
+    padding: 30px;
+    font-size: 10px;
+}
+.header-top p{
+    letter-spacing: 2px;
+    margin-top: -10px;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -25px;
+
+}
+.header-text {
+    text-align: center;
+    margin-top: 10%;
+}
+.header-text h1 {
+    letter-spacing: 5px;
+    font-weight: normal;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+span {
+    font-size: 55px;
+    font-weight: normal;
+}
+.header-text p {
+    font-size: 10px;
+    margin-top: 0;
+}
+.header-btn {
+    margin-top: 10%;
+    border: 2px white solid;
+    background-color:rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 10px 50px;
+}
+.about-artic article {
+    display: flex;
+    flex-direction: row;
+}
+.about-artic h3 {
+    padding: 5%;
+    width: 50%;
+    text-align: left;
+    font-weight: lighter;
+
+}
+.about-artic p {
+    padding: 5%;
+    text-align: left;
+    width: 50%;
+    font-size: 10px;
+    color: #2d393e;
+}
+.central-artic {
+    background-color: #f3f3f3;
+    padding: 0 50px;
+}
+.central-artic h3 {
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 50px;
+    width: 100%;
+}
+.img-wrapper {
+    position: relative;
+    width: 100%;
+}
+.central-artic img {
+    width: 100%;
+    padding-bottom: 15px;
+
+}
+.central-artic .btn-like {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: 2px white solid;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 5px;
+}
+
+.central-artic article{
+    display: flex;
+    flex-direction: row;
+}
+.central-artic article:nth-child(odd) {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.central-artic p {
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+}
+.img-wrapper p {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    color: white;
+    width: auto;
+}
