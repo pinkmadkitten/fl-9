@@ -19,7 +19,7 @@ header img {
     width: 100%;
 }
 
-.content {
+.header-wrapper {
     color: #ffffff;
     font-weight: normal;
     position: absolute;
@@ -28,9 +28,9 @@ header img {
 
 }
 
-.content a {
+.header-wrapper a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     padding: 0 20px;
 }
 
@@ -75,9 +75,9 @@ span {
 
 .header-btn {
     margin-top: 10%;
-    border: 2px white solid;
+    border: 2px #ffffff solid;
     background-color: rgba(0, 0, 0, 0.4);
-    color: white;
+    color: #ffffff;
     padding: 10px 50px;
 }
 
@@ -100,13 +100,13 @@ span {
     color: #2d393e;
 }
 
-.central {
+#vacancies {
     background-color: #f3f3f3;
     padding: 0 50px 50px 50px;
 
 }
 
-.central h3 {
+#vacancies h3 {
     padding-top: 100px;
     text-align: center;
     padding-bottom: 50px;
@@ -116,40 +116,43 @@ span {
 .img-wrapper {
     position: relative;
     width: 100%;
+    margin-bottom: 15px;
 }
 
-.central img {
+#vacancies img {
     width: 100%;
-    padding-bottom: 15px;
 
 }
 
-.central .btn-like {
+#vacancies .btn-like {
     position: absolute;
     top: 15px;
     right: 15px;
-    border: 2px white solid;
+    border: 2px #ffffff solid;
     background-color: rgba(0, 0, 0, 0.4);
-    color: white;
+    color: #ffffff;
     padding: 5px;
-    width: 10%;
 }
 
-.central article {
+#vacancies article {
     display: flex;
     flex-direction: row;
 }
 
-.central article:nth-child(odd) {
+#vacancies article:nth-child(odd) {
     display: flex;
     flex-direction: row-reverse;
-
 }
 
-.central p {
+#vacancies p {
     width: 50%;
     text-align: center;
     font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0;
 }
 
 .img-wrapper p {
@@ -160,33 +163,36 @@ span {
     width: auto;
 }
 
-.toolbar-center {
+.subscribe-main {
     background-color: #ffffff;
     margin-top: 3%;
     padding: 5%;
     width: 100%;
 }
 
-.toolbar-center label {
-    width: 30%;
+.subscribe-main label {
+    width: 25%;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
-.toolbar-center input {
-    width: 60%;
-    margin-left: 1%;
+.subscribe-main input {
+    width: 65%;
     padding: 15px 0;
     display: inline-block;
     border: 1px solid #343638;
     height: 45px;
 }
 
-.toolbar-center button {
+.subscribe-main button {
     padding: 0% 1%;
     margin: -1%;
     background-color: #343638;
     color: #ffffff;
     height: 45px;
-    border: 1px solid black;
+    border: 1px solid #000000;
+    width: 10%;
 }
 
 input[type=email] {
@@ -200,7 +206,7 @@ input[type=email] {
     padding: 70px 50px;
 }
 
-.art-1 {
+.smaller {
     text-align: left;
     width: 40%;
     margin: 2%;
@@ -216,11 +222,11 @@ p.italic {
     font-style: italic;
 }
 
-p.tweet {
-    color: #ece8e8 !important;
+#shop article p.tweet {
+    color: #ece8e8;
 }
 
-.art-2 {
+.newsletter {
     width: 65%;
     padding: 2%;
 }
@@ -233,14 +239,14 @@ article input {
     height: 35px;
 }
 
-.art-2 button {
+.newsletter button {
     padding: 0% 3%;
     margin: -2%;
     background-color: #343638;
     color: #ffffff;
     width: 30%;
     height: 35px;
-    border: 1px solid black;
+    border: 1px solid #000000;
 }
 
 footer {
@@ -266,4 +272,14 @@ footer {
     text-decoration: none;
     color: #000000;
     padding: 0 0 0 20px;
+}
+
+.img-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 5px;
+    right: 0;
+    box-shadow: inset 0px 0px 150px #000000;
 }
