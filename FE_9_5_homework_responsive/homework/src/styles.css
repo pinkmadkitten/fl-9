@@ -144,6 +144,9 @@ article p {
 
     h2 {
         font-size: 48px;
+        background: linear-gradient(to right, #fff, #fff, #333 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #00000057;
     }
 
     article {
@@ -153,4 +156,8 @@ article p {
     article p {
         font-size: 24px;
     }
+}
+
+@media screen and (min-width: 992px) {
+
 }
