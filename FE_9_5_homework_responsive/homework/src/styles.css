@@ -1,29 +1,3 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-:root {
-    --bg-color--dark: #0a1223;
-    --bg-color--light: #fff;
-    --link: #5d5d5d;
-    --link--active: #54597d;
-    --link--hover: #54597d;
-    --article-title: #ddd;
-    --article-title--dark: #000;
-    --thumbnail--description: #5d5d5d;
-
-    /* These styles are needed only for media query max-width: 575px */
-
-    /* The 'Up' button (circle button at right bottom corner) */
-    --btn-color: #fff;
-    --btn-bg-color: #5ebcff;
-
-    --navigation-border-bottom: #ddd;
-    --thumbnail-title: #484747;
-}
-
-/* Your styles go here */
-
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -58,6 +32,7 @@ nav a {
 a:active, a:focus {
     font-weight: bold;
     color: #54597d;
+    outline: none;
 }
 
 h1 {
@@ -125,11 +100,12 @@ article p {
 
     nav a {
         border: none;
-        padding-left: 50px;
+        padding-right: 50px;
+        padding-left: 0;
     }
 
-    nav a:first-child {
-        padding-left: 0;
+    nav a:last-child {
+        padding-right: 0;
     }
 
     a:active, a:focus {
@@ -159,5 +135,41 @@ article p {
 }
 
 @media screen and (min-width: 992px) {
+
+    nav {
+        justify-content: flex-end;
+    }
+
+    nav a:last-child {
+        padding-right: 50px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    article:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    article > div {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 50%;
+    }
+
+    article img {
+        width: 50%;
+    }
+
+    article p {
+        font-size: 18px;
+    }
 
 }
