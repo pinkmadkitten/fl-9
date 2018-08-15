@@ -7,5 +7,7 @@ const c = parseFloat(Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) - 2 * b * a * Mat
     .toFixed(2));
 const P = a + b + c;
 const S = parseFloat((squareHelper * (a * b * Math.sin(Y * Math.PI / angleSum))).toFixed(2));
-console.log(a <= 0 || b <= 0 || Y <= 0 ? 'Invalid data' : 'c length: ' + c + '\nTriangle square: ' +
-    S + '\nTriangle perimeter: ' + P);
+console.log(a <= 0 || b <= 0 || Y <= 0 || Y >= angleSum ? 'Invalid data' :
+    `c length: ${c}
+Triangle square: ${S}
+Triangle perimeter: ${P}`);
