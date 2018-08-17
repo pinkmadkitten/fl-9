@@ -9,7 +9,6 @@ while (question) {
     let rangeEnd = 5;
     let randomNum = random(rangeStart, rangeEnd);
     while (question && attempt < availableAttempts) {
-        console.log(randomNum);
         let userNumber = +prompt(
 `Please enter the number from ${rangeStart} to ${rangeEnd}
 Attempts left: ${availableAttempts - attempt}
