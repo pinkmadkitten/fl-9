@@ -1,12 +1,14 @@
 const availableAttempts = 3;
+const startPrize = 10;
+const startRangeEnd = 5;
 const rangeStart = 0;
+let rangeEnd = startRangeEnd;
 let attempt = 0;
-let maxPrize = 10;
+let maxPrize = startPrize;
 let possiblePrize = maxPrize;
 let prize = 0;
 let question = confirm(`Do you want to play a game?`);
 while (question) {
-    let rangeEnd = 5;
     let randomNum = random(rangeStart, rangeEnd);
     while (question && attempt < availableAttempts) {
         let userNumber = +prompt(
@@ -25,7 +27,7 @@ Possible prize on current attempt: ${possiblePrize}$`);
         } else if (!userNumber) {
             alert(`Thank you for a game. Your prize is: ${prize}`);
             question = confirm(`Do you want to play again?`);
-            attempt = 0;
+            resetValues();
         } else {
             possiblePrize = Math.floor(possiblePrize / 2);
             attempt++;
@@ -34,7 +36,7 @@ Possible prize on current attempt: ${possiblePrize}$`);
     if (attempt >= availableAttempts) {
         alert(`Thank you for a game. Your prize is: ${prize}`);
         question = confirm(`Do you want to play again?`);
-        attempt = 0;
+        resetValues();
     }
 }
 
@@ -47,7 +49,10 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min + fixture) - min);
 }
 
-
-
-
-
+function resetValues() {
+    attempt = 0;
+    maxPrize = startPrize;
+    possiblePrize = maxPrize;
+    prize = 0;
+    rangeEnd = startRangeEnd;
+}
