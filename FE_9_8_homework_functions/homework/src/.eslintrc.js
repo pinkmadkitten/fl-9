@@ -5,6 +5,7 @@ module.exports = {
 		es6: true
 	},
 	rules: {
+		"no-unused-vars": ["error", { "vars": "local"}],
 		"no-console": 0,
 		"no-extra-parens": ["error", "all"],
 		"array-callback-return": "error",
