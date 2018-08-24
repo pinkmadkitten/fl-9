@@ -8,6 +8,3 @@ function reverseNumber(x) {
     let rev = reversedArray.join('');
     return parseFloat(rev);
 }
-
-
-
