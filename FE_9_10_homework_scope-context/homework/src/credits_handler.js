@@ -1,9 +1,10 @@
 //Task 1
 const magicNumbers = {
+    half: 0.5,
     three: 3,
-    five: 5,
     hundred: 100
-}
+};
+
 function userCard(number) {
     const cardInfo = {
         balance: 100,
@@ -18,15 +19,15 @@ function userCard(number) {
 
     function putCredits(amount) {
         cardInfo.balance = cardInfo.balance + amount;
-        updateHistory('Received credits', amount)
+        updateHistory('Received credits', amount);
     }
 
     function takeCredits(amount) {
         if (cardInfo.balance >= amount && cardInfo.transactionLimit >= amount) {
             cardInfo.balance = cardInfo.balance - amount;
-            updateHistory('Withdrawal of credits', amount)
+            updateHistory('Withdrawal of credits', amount);
         } else if (cardInfo.balance < amount) {
-            console.log('You don\'t have enough money');
+            console.log(`You don't have enough money`);
         } else {
             console.log('Out of transaction limit');
         }
@@ -34,11 +35,11 @@ function userCard(number) {
 
     function setTransactionLimit(amount) {
         cardInfo.transactionLimit = amount;
-        updateHistory('Transaction limit change', amount)
+        updateHistory('Transaction limit change', amount);
     }
 
     function transferCredits(amount, card) {
-        let taxes = amount * magicNumbers.five / magicNumbers.hundred;
+        let taxes = amount * magicNumbers.half / magicNumbers.hundred;
         let balance = cardInfo.balance;
         takeCredits(amount);
         if (balance < cardInfo.balance) {
@@ -55,7 +56,13 @@ function userCard(number) {
         cardInfo.historyLogs.push(entry);
     }
 
-    return {getCardOptions, putCredits, takeCredits, setTransactionLimit, transferCredits};
+    return {
+        getCardOptions,
+        putCredits,
+        takeCredits,
+        setTransactionLimit,
+        transferCredits
+    };
 }
 
 //Task 2
@@ -72,7 +79,8 @@ class UserAccount {
             this.cards.push(userCard(this.cards.length + 1));
         }
     }
-    getCardByKey (number) {
-       return this.cards[number-1];
+
+    getCardByKey(number) {
+        return this.cards[number - 1];
     }
 }
