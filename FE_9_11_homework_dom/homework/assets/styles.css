@@ -48,7 +48,6 @@ li > span {
 .disabled {
     color: grey;
     cursor: no-drop;
-    pointer-events: none;
 }
 
 .dragging-over {
